@@ -8,15 +8,24 @@
 
 <body>
     <div id="container">
-        <h1>BatterySwapSystem Example</h1>
+        <h1>BatterySwapSystem</h1>
+        <p id="result_node"></p>
     </div>
     <script src="../../dist/BatterySwapSystem.js"></script>
     <script>
-
-        var batterySwapSystem = new BatterySwapSystem(0.10);
+        const batterySwapSystem = new BatterySwapSystem(0.1);
 
         function swap() {
-            batterySwapSystem.swapBattery(20);
+            batterySwapSystem.addBattery("B1", 100);
+
+            batterySwapSystem.addDriver("D1", "John");
+
+            batterySwapSystem.addStation("StationA", 5);
+            batterySwapSystem.addStation("StationB", 10);
+
+            const swap = batterySwapSystem.swapBattery("B1", "D1", "StationA", 20, 10);
+
+            result_node.innerHTML = swap;
         }
 
         swap();
