@@ -1,0 +1,11 @@
+*.log
+*.pid
+*.seed
+.DS_Store
+.idea
+.vscode
+coverage/
+lib-cov/
+logs/
+node_modules/
+pids/

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BatterySwapSystem Example</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>BatterySwapSystem Example</h1>
+    </div>
+    <script src="../../dist/BatterySwapSystem.js"></script>
+    <script>
+
+        var batterySwapSystem = new BatterySwapSystem(0.10);
+
+        function swap() {
+            batterySwapSystem.swapBattery(20);
+        }
+
+        swap();
+    </script>
+</body>
+
+</html>
