@@ -138,8 +138,7 @@ export default class BatterySwapSystem {
     const station = this.stations.find((station) => station.id === stationId);
 
     if (!battery || !driver || !station) {
-      console.log('Invalid battery, driver, or station!');
-      return 'Invalid battery, driver, or station!';
+      throw new Error('Invalid battery, driver, or station!');
     }
 
     battery.updateEnergyLevel(energyUsed);
